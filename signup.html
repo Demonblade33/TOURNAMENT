@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+  <link rel="stylesheet" href="Style/Login.css">
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+  
+  <script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyBdt5Ne9Haj9HdsXC6vVvO39sGZ3WveH74",
+    authDomain: "demongodyt-5b2d1.firebaseapp.com",
+    projectId: "demongodyt-5b2d1",
+    storageBucket: "demongodyt-5b2d1.firebasestorage.app",
+    messagingSenderId: "151950156819",
+    appId: "1:151950156819:web:5e8f9035ffa191a77f4be6",
+    measurementId: "G-8CSB2KKRJG"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <input type="email" id="signup-email" placeholder="Email">
+    <input type="password" id="signup-password" placeholder="Password">
+    <button onclick="signup()">Create Account</button>
+    <p id="signup-msg"></p>
+    <a href="login.html" style="color: #00c6ff; text-decoration: none; display: block; margin-top: 10px;">
+      Already have an account? Login
+    </a>
+  </div>
+
+  <script>
+    function signup() {
+      const email = document.getElementById("signup-email").value.trim();
+      const password = document.getElementById("signup-password").value;
+
+      if (!email || !password) {
+        document.getElementById("signup-msg").innerText = "❌ Please fill in all fields.";
+        return;
+      }
+
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          document.getElementById("signup-msg").innerText = "✅ Account created! Redirecting...";
+          setTimeout(() => {
+            window.location.href = "index.html"; // or "dashboard.html"
+          }, 1000);
+        })
+        .catch((error) => {
+          document.getElementById("signup-msg").innerText = "❌ " + error.message;
+        });
+    }
+
+    
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        window.location.href = "index.html"; // or dashboard
+      }
+    });
+  </script>
+</body>
+</html>
