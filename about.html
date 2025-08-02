@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - DemonGod YT</title>
+  <link rel="stylesheet" href="Style/style.css" />
+</head>
+<body>
+  <nav class="navbar" style="background-color: black;">
+    <a href="index.html"> Home</a>
+    <a href="Pricing.html">Pricing </a>
+    <a href="about.html"> About</a>
+  </nav>
+
+<header class="hero">
+  <h1 class="rgb-text">About Me</h1>
+  <p>Get to know the creator behind the chaos 😈</p>
+</header>
+
+
+  <section class="content">
+    <div class="card">
+      <h2>👑 Who am I?</h2>
+      <p>I’m DemonGod YT — Content Creator, Modder,Gamer And Developer </p>
+    </div>
+    
+    <div class="card">
+      <h2>📺 My YouTube</h2>
+      <p>Over 516 subscribers — thanks for the support!</p>
+      <a href="https://youtube.com/@DemonGod-3" target="_blank" class="yt-btn">Visit Channel</a>
+    </div>
+
+
+  </section>
+<script>
+  document.addEventListener("click", function(e) {
+    const spark = document.createElement("div");
+    spark.className = "click-effect";
+    spark.style.left = `${e.clientX}px`;
+    spark.style.top = `${e.clientY}px`;
+    document.body.appendChild(spark);
+    setTimeout(() => spark.remove(), 600);
+  });
+</script>
+
+  <footer>
+    <p>Made with ❤️ by DemonGod YT | About the legend</p>
+  </footer>
+</body>
+</html>

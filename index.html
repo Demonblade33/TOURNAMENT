@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLUTCH MOMENT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.3/tsparticles.bundle.min.js"></script>
+  <link rel="stylesheet" href="Style/style.css" />
+</head>
+<body>
+
+<nav class="navbar" style="background-color: black;">
+  <button class="toggle" onclick="toggleTheme()" style="background-color: gold;">🌙 Toggle</button>
+  <button class="toggle" onclick="goToLogin()" style="background-color: gold;">Login</button>
+  <button class="toggle" onclick="goToSignup()" style="background-color: gold;">Signup</button>
+  
+    <a href="index.html">Home</a>
+    <a href="Pricing.html">Pricing </a>
+    <a href="about.html">About</a>
+  </nav>
+
+
+<section class="video-section" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+  <video autoplay muted loop playsinline >
+    <source src="Video/VALO.mp4" type="video/mp4">
+  </video>
+  
+<h1 id="clutchText" class="glow-text" style=" text-align: center;">
+   VALORANT SCRIMS
+</h1>
+  <div style="height: 200vh;"></div>
+</section>
+
+
+<section class="video-section" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+  <video autoplay muted loop playsinline >
+    <source src="Video/FF.mp4" type="video/mp4">
+  </video>
+  
+<h1 id="clutchText" class="glow-text" style=" text-align: center;">
+  FREEFIRE SCRIMS
+</h1>
+  <div style="height: 200vh;"></div>
+</section>
+
+
+
+<script src="Scripts/app.js"></script>
+</body>
+</html>
